@@ -1,0 +1,35 @@
+{
+  "name": "note-taking-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^5.56.2",
+    "@vee-validate/yup": "^4.13.2",
+    "@vueuse/components": "^11.1.0",
+    "@vueuse/core": "^11.1.0",
+    "axios": "^1.7.7",
+    "flowbite": "^2.5.1",
+    "pinia": "^2.2.2",
+    "v-autosize": "^2.0.0",
+    "v-autosize-input": "^0.3.0",
+    "vee-validate": "^4.13.2",
+    "vue": "^3.5.8",
+    "vue-router": "^4.4.5",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.6.1",
+    "@types/vue": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.7",
+    "vue-tsc": "^2.0.29"
+  }
+}
