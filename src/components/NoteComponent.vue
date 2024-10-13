@@ -9,9 +9,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="border p-6 border-1 border-black rounded-lg w-[19.5rem]">
-    <h1 class="font-bold">{{ props.title }}</h1>
-    <p>{{ props.content }}</p>
+  <div class="flex justify-between border p-5 border-1 border-gray-300 rounded-lg w-[19rem]">
+    <div class="mt-0">
+      <h1 class="font-bold">{{ props.title }}</h1>
+      <p>{{ props.content }}</p>
+    </div>
+    <span class="icon-[ph--trash]"></span>
+
   </div>
 </template>
 

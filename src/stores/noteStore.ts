@@ -18,9 +18,11 @@ export interface Note {
 export async function getNotes({}: QueryFunctionContext): Promise<Note[]> {
     try {
         const response = await apiClient.get("api/notes");
+        console.log("here")
+        console.log(response.data.data)
         return response.data.data;
     } catch (error: any) {
-        console.error(error.mensage);
+        console.error(error.message);
         return [];
     }
 }
@@ -28,14 +30,17 @@ export async function getNotes({}: QueryFunctionContext): Promise<Note[]> {
 export const useNotes = () => {
     // const queryClient = useQueryClient();
 
-    const {data: notes} = useQuery({
+    const {isPending, isError, data, error} = useQuery<Note[]>({
         queryKey: ["notes"],
         queryFn: getNotes,
         initialData: [],
     })
 
     return {
-        data: notes
+        isPending,
+        isError,
+        data,
+        error
     }
 
 

@@ -37,7 +37,6 @@ const handleShowTitle = () => {
   isTitleVisible.value = true;
 };
 
-// Para controlar la visibilidad del título
 const toggleTitleVisibility = () => {
   isTitleVisible.value = isTitleFocused.value || isTextareaFocused.value || isTitleVisible.value;
 };

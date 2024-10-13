@@ -14,6 +14,18 @@ apiClient.interceptors.request.use(
     (error) => Promise.reject(error),
 );
 
+apiClient.interceptors.response.use(
+    (response) => response,
+    async (error) => {
+        if (error?.response.status === 401) {
+
+        } else {
+            return Promise.reject(error);
+        }
+    }
+);
+
+
 export const AxiosPlugin = {
     install: (app: App) => {
         app.config.globalProperties.$apiClient = apiClient;

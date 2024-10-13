@@ -24,6 +24,8 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.254",
+    "@iconify/tailwind": "^1.1.3",
     "@types/node": "^22.6.1",
     "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^5.1.4",

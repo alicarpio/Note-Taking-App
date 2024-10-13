@@ -7,22 +7,21 @@ import {ref} from "vue";
 
 const notes = useNotes();
 
-let title = ref(false)
+const listNotes = notes.data || [];
 
-const listNotes = [{
-  title: "TITLE",
-  content: "SKKDK FKLFLR FKLKFR FKFKJJK"
-}]
+let title = ref(false)
 
 
 </script>
 
 <template>
-  <section class=" m-5">
-    <h1>Hola</h1>
+  <section class="m-5 w-full">
+    <!--    <h1>Hola</h1>-->
     <InputNoteComponent :show-title="title"/>
-    <div v-for="note in listNotes" class="flex gap-2 mx-32 mt-12">
-      <NoteComponent :content="note.content" :title="note.title"/>
+    <div class="flex flex-wrap gap-x-4 ml-32 mt-12">
+      <div v-for="note in listNotes" :key="note.id" class="">
+        <NoteComponent :content="note.content" :title="note.title"/>
+      </div>
     </div>
   </section>
 </template>

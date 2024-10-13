@@ -1,4 +1,5 @@
 import flowbite from "flowbite/plugin";
+import {addDynamicIconSelectors} from "@iconify/tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -19,5 +20,5 @@ export default {
             },
         },
     },
-    plugins: [flowbite],
+    plugins: [flowbite, addDynamicIconSelectors()],
 };
